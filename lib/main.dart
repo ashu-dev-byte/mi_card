@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +10,7 @@ void main() {
             child: Padding(
               padding: const EdgeInsets.only(top: 100.0),
               child: Column(
+                // mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   CircleAvatar(
                     radius: 60.0,
@@ -31,48 +33,43 @@ void main() {
                         letterSpacing: 0.3,
                         color: Colors.white),
                   ),
-                  Container(
+                  SizedBox(
+                    height: 20.0,
+                    width: 200.0,
+                    child: Divider(color: Colors.white),
+                  ),
+                  Card(
                     color: Colors.white,
-                    margin: EdgeInsets.all(20.0),
-                    padding:
-                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                    child: Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.phone,
-                          color: Colors.teal,
-                        ),
-                        SizedBox(width: 10.0),
-                        Text(
-                          "+91 96930 48167",
-                          style: TextStyle(
-                              color: Colors.teal[600],
-                              fontFamily: "Source Sans Pro",
-                              fontSize: 20.0),
-                        ),
-                      ],
+                    margin: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.phone,
+                        color: Colors.teal,
+                      ),
+                      title: Text(
+                        "+91 96930 48167",
+                        style: TextStyle(
+                            color: Colors.teal[600],
+                            fontFamily: "Source Sans Pro",
+                            fontSize: 20.0),
+                      ),
                     ),
                   ),
-                  Container(
+                  Card(
                     color: Colors.white,
                     margin: EdgeInsets.all(20.0),
-                    padding:
-                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                    child: Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.email,
-                          color: Colors.teal,
-                        ),
-                        SizedBox(width: 10.0),
-                        Text(
-                          "ashutosh.anand_cs17@gla.ac.in",
-                          style: TextStyle(
-                              color: Colors.teal[600],
-                              fontFamily: "Source Sans Pro",
-                              fontSize: 17.5),
-                        ),
-                      ],
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.email,
+                        color: Colors.teal,
+                      ),
+                      title: Text(
+                        "ashutosh.anand_cs17@gla.ac.in",
+                        style: TextStyle(
+                            color: Colors.teal[600],
+                            fontFamily: "Source Sans Pro",
+                            fontSize: 17.0),
+                      ),
                     ),
                   ),
                 ],
